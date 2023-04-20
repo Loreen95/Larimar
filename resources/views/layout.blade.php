@@ -10,19 +10,19 @@
     <title>{{ $title }} // {{ config('app.name')}}</title>
 </head>
 <body>
-    <header>
-        @include('layout.header')
-        @include('layout.navbar')
-    </header>
+    <div class="flex flex-col h-screen justify-between">
+        <div class="header">
+            @include('layout.navbar')
+        </div>
 
 
-    <main>
-        @yield('section')
-    </main>
+        <main class="mb-auto h-screen">
+            @yield('section') 
+        </main>
 
-    <footer>
-        
-    </footer>
-</div>
+        <footer class="h-14 bg-gray-300">
+            @include('layout.footer')
+        </footer>
+    </div>
 </body>
 </html>
