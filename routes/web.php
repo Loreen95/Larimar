@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\AccountController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\FavoritesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +25,16 @@ Route::get('/products', [ProductController::class, 'products'])->name('products'
 Route::get('/register', [RegisterController::class, 'register'])->name('register');
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
+
+Route::get('/welcome', [WelcomeController::class, 'welcome'])->name('welcome');
+
+Route::get('/account', [AccountController::class, 'account'])->name('account')->middleware('auth');
+
+Route::get('/favorites', [FavoritesController::class, 'favorites'])->name('favorites');
+
+Route::get('/cart', [CartController::class, 'cart'])->name('cart');
+
+// Route::match('post', 'get'), '/user/edit', [])->name('')->middleware('auth'); 
 
 Route::get('/', function () {
     return view('welcome');
