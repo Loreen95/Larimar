@@ -1,109 +1,174 @@
-<header class="relative">
-  <nav aria-label="Top" class="mx-auto max-w-auto">
-    <div class="border-b border-gray-200">     
-      <div class="flex h-16 items-center">
-        {{-- Logo & Home --}}     
-        <div class="ml-auto flex items-center">
-          <a href="{{route('welcome')}}" class="hover:text-sky-600 ">
-            <span class="font-sans text-3xl">Larimar</span>
-          </a>
-        </div>
-        {{-- Account --}}
-          <div class="ml-auto flex items-center">
-            <div class="flex lg:ml-6">
-              <a href="{{route('account')}}" class="flex flex-col items-center p-2 text-gray-700 hover:text-sky-600 ">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                </svg>
-                <div>Account</div>  
-              </a>
-            </div>
-            <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
-        
-            {{-- Wishlist --}}
-            <div class="flex lg:ml-6">
-              <a href="{{route('favorites')}}" class="flex flex-col items-center p-2 text-gray-700 hover:text-sky-600 ">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                </svg>
-                <div>Favorieten</div>  
-              </a>
-            </div>
-            <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
-        
-            {{-- Shopping cart --}}
-            <div class="flex lg:ml-6">
-              <a href="{{route('cart')}}" class="flex flex-col items-center p-2 text-gray-700 hover:text-sky-600 ">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                </svg>
-              <div>Winkelmandje</div>  
-            </a>
-            </div>
+<div class="dark:bg-cyan-700">
+  <div>
+      <div class="relative">
+          <!-- For md screen size -->
+          <div id="md-searchbar" class="bg-white dark:bg-cyan-700 hidden lg:hidden py-5 px-6 items-center justify-between">
+              <div class="flex items-center space-x-3 text-gray-800 dark:text-white">
+                  <div>
+                    <span class="font-sans text-3xl">Larimar</span>
+                  </div>
+                  <input type="text" placeholder="Search for products" class="text-sm leading-none dark:text-gray-300 dark:bg-gray-900 text-gray-600 focus:outline-none" />
+              </div>
+              <div class="space-x-6">
+                  <button aria-label="view favourites" class="text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800">
+                    <span class="font-sans text-3xl">Larimar</span>
+                  </button>
+                  <button aria-label="go to cart" class="text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800">
+                    <span class="font-sans text-3xl">Larimar</span>
+                  </button>
+              </div>
           </div>
-        </div>
+          <!-- For md screen size -->
+
+          <!-- For large screens -->
+          <div class="dark:bg-cyan-700 bg-gray-50 px-6 py-9">
+              <div class="container mx-auto flex items-center justify-between">
+                  <h1 class="md:w-2/12 cursor-pointer text-gray-800 dark:text-white" aria-label="the Crib.">
+                    <a href="{{route('welcome')}}"><span class="font-sans text-3xl">Larimar</span></a>
+                  </h1>
+                  <ul class="hidden w-8/12 md:flex items-center justify-center space-x-8">
+                      <li>
+                          <a href="{{route('welcome')}}" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Home</a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Nieuw</a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Bovenkleding</a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Onderkleding</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Schoenen</a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Accesoires</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Sale</a>
+                  </li>
+                  </ul>
+
+                  <div class="md:w-2/12 justify-end flex items-center space-x-4 xl:space-x-8">
+                      {{-- <div class="hidden lg:flex items-center">
+                          <button onclick="toggleSearch()" aria-label="search items" class="w-5 text-gray-800 dark:hover:text-gray-300 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800">
+                              <img class="transform rotate-90 dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg2.svg" alt="search">
+                              <img class="transform rotate-90 dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg2dark.svg" alt="search">
+                          </button>
+                          <input id="searchInput" type="text" placeholder="search" class="hidden text-sm dark:bg-gray-900 dark:placeholder-gray-300 text-gray-600 rounded ml-1 border border-transparent focus:outline-none focus:border-gray-400 px-1" />
+                      </div> --}}
+                      <div class="hidden md:flex items-center space-x-4">
+                        <a aria-label="my account" href="{{route('account')}}" class="focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline p-0.5 rounded">
+                            <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-III-svg2.svg" alt="account">
+                            <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-III-svg2dark.svg" alt="account">
+                        </a>
+                        <a aria-label="Favourites" href="javascript:void(0)" class="focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline p-0.5 rounded">
+                            <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-III-svg3.svg" alt="Favourites">
+                            <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-III-svg3dark.svg" alt="Favourites">
+                        </a>
+                        <a aria-label="Bag" href="javascript:void(0)" class="focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline p-0.5 rounded">
+                            <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-III-svg4.svg" alt="bag">
+                            <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-III-svg4dark.svg" alt="bag">
+                        </a>
+                    </div>
+
+                      <div class="flex lg:hidden">
+                          <button aria-label="show options" onclick="mdOptionsToggle()" class="text-black dark:text-white dark:hover:text-gray-300 hidden md:flex focus:outline-none focus:ring-2 rounded focus:ring-gray-600">
+                              <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg5.svg" alt="toggler">
+                              <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg5dark.svg" alt="toggler">
+                          </button>
+
+                          <button aria-label="open menu" onclick="openMenu()" class="text-black dark:text-white dark:hover:text-gray-300 md:hidden focus:outline-none focus:ring-2 rounded focus:ring-gray-600">
+                              <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg5.svg" alt="toggler">
+                              <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg5dark.svg" alt="toggler">
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- For small screen -->
+          {{-- <div id="mobile-menu" class="hidden absolute dark:bg-cyan-700 z-10 inset-0 md:hidden bg-white flex flex-col h-screen w-full">
+              <div class="flex items-center justify-between border-b border-gray-200 dark:border-gray-700 pb-4 p-4">
+                  <div class="flex items-center space-x-3">
+                      <div>
+                          <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg2.svg" alt="search">
+                          <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg2dark.svg" alt="search">  
+                      </div>
+                      <input type="text" placeholder="Search for products" class="text-sm dark:bg-gray-900 text-gray-600 placeholder-gray-600 dark:placeholder-gray-300 focus:outline-none" />
+                  </div>
+
+                  <button onclick="closeMenu()" aria-label="close menu" class="focus:outline-none focus:ring-2 rounded focus:ring-gray-600">
+                      <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg6.svg" alt="cross">
+                      <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg6dark.svg" alt="cross">  
+                  </button>
+              </div>
+              <div class="mt-6 p-4">
+                  <ul class="flex flex-col space-y-6">
+                      <li>
+                          <a href="javascript:void(0)" class="dark:text-white flex items-center justify-between hover:underline text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800">
+                              Home
+                              <div>
+                                  <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg7.svg" alt="arrow">
+                                  <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg7dark.svg" alt="arrow">  
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)" class="dark:text-white flex items-center justify-between hover:underline text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800">
+                              Furniture
+                              <div>
+                                  <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg7.svg" alt="arrow">
+                                  <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg7dark.svg" alt="arrow">  
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)" class="dark:text-white flex items-center justify-between hover:underline text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800">
+                              Lookbook
+                              <div>
+                                  <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg7.svg" alt="arrow">
+                                  <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg7dark.svg" alt="arrow">  
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)" class="dark:text-white flex items-center justify-between hover:underline text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800">
+                              Support
+                              <div>
+                                  <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg7.svg" alt="arrow">
+                                  <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg7dark.svg" alt="arrow">  
+                              </div>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="h-full flex items-end">
+                  <ul class="flex flex-col space-y-8 bg-gray-50 w-full py-10 p-4 dark:bg-gray-800">
+                      <li>
+                          <a href="javascript:void(0)" class="dark:text-white text-gray-800 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
+                              <div>
+                                  <img class="w-5 dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg4.svg" alt="bag">
+                                  <img class="w-5 dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg4dark.svg" alt="bag">
+                              </div>
+                              <p class="text-base">Cart</p>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)" class="dark:text-white text-gray-800 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
+                              <div>
+                                  <img class="w-5 dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg3.svg" alt="favourites">
+                                  <img class="w-5 dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-I-svg3dark.svg" alt="favourites">
+                              </div>
+                              <p class="text-base">Wishlist</p>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div> --}}
       </div>
-    </nav>
-    <div class="mx-auto max-w-4xl">
-      <div class="border-b border-gray-200"> 
-        <div class="ml-auto flex items-center">  
-          <div class="flex h-16 items-center">
-            <div class="flex lg:ml-6">
-              <a href="{{route('welcome')}}" class="flex flex-col items-center p-2 text-gray-700 hover:text-sky-600 ">
-                <div>Home</div>  
-              </a>
-            </div>
-          </div>
-          <div class="flex h-16 items-center">
-            <div class="flex lg:ml-6">
-              <a href="#" class="flex flex-col items-center p-2 text-gray-700 hover:text-sky-600 ">
-                <div>Nieuw</div>  
-              </a>
-            </div>
-          </div>          
-          <div class="flex h-16 items-center">
-            <div class="flex lg:ml-6">
-              <a href="#" class="flex flex-col items-center p-2 text-gray-700 hover:text-sky-600 ">
-                <div>Bovenkleding</div>  
-              </a>
-            </div>
-          </div>
-          <div class="flex h-16 items-center">
-            <div class="flex lg:ml-6">
-              <a href="#" class="flex flex-col items-center p-2 text-gray-700 hover:text-sky-600 ">
-                <div>Onderkleding</div>  
-              </a>
-            </div>
-          </div>
-        <div class="flex h-16 items-center">
-          <div class="flex lg:ml-6">
-            <a href="#" class="flex flex-col items-center p-2 text-gray-700 hover:text-sky-600 ">
-              <div>Schoenen</div>  
-            </a>
-          </div>
-        </div>
-        <div class="flex h-16 items-center">
-          <div class="flex lg:ml-6">
-            <a href="#" class="flex flex-col items-center p-2 text-gray-700 hover:text-sky-600 ">
-              <div>Accesoires</div>  
-            </a>
-          </div>
-        </div>
-        <div class="flex h-16 items-center">
-          <div class="flex lg:ml-6">
-            <a href="#" class="flex flex-col items-center p-2 text-gray-700 hover:text-sky-600">
-              <div>Badmode</div>  
-            </a>
-          </div>
-        </div>
-        <div class="flex h-16 items-center">
-          <div class="flex lg:ml-6">
-            <a href="#" class="flex flex-col items-center p-2 text-gray-700 hover:text-sky-600">
-              <div>Sale</div>  
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  </div>
 </div>
+
+
+

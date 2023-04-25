@@ -34,8 +34,6 @@ Route::get('/favorites', [FavoritesController::class, 'favorites'])->name('favor
 
 Route::get('/cart', [CartController::class, 'cart'])->name('cart');
 
-// Route::match('post', 'get'), '/user/edit', [])->name('')->middleware('auth'); 
-
 Route::get('/', function () {
     return view('welcome');
 });
