@@ -1,10 +1,10 @@
-@extends('layout', ['title' => 'Home'])
+@extends('layout', ['title' => 'Dashboard'])
 
 @section('section')
 
 {{-- Promo --}}
 <div class="lg:px-20 md:px-6 px-4 md:py-12 py-8">
-    <h1 class="lg:text-4xl text-3xl font-semibold text-gray-800 text-center dark:text-white">Discover Lufu’s World</h1>
+    <h1 class="lg:text-4xl text-3xl font-semibold text-gray-800 text-center dark:text-gray">Nieuw binnen</h1>
     <div class="flex justify-center">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 lg:mt-16 md:mt-12 mt-8 items-center">
             <div class="relative flex flex-col">
