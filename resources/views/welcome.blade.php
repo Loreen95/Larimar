@@ -1,4 +1,4 @@
-@extends('layout', ['title' => 'Dashboard'])
+@extends('layout', ['title' => 'Home'])
 
 @section('section')
 

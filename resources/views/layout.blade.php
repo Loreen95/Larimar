@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-    @vite('resources/js/script.js') 
     @vite('resources/css/style.css')
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
@@ -24,5 +23,6 @@
             @include('layout.footer')
         </footer> --}}
     </div>
+    @vite('resources/js/script.js');
 </body>
 </html>

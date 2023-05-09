@@ -23,7 +23,7 @@ Route::get('/products', [ProductController::class, 'products'])->name('products'
 
 Route::get('/welcome', [WelcomeController::class, 'welcome'])->name('welcome');
 
-Route::get('/account', [AccountController::class, 'account'])->name('account')->middleware('auth');
+Route::get('/dashboard', [AccountController::class, 'account'])->name('account')->middleware('auth');
 
 Route::get('/favorites', [FavoritesController::class, 'favorites'])->name('favorites');
 

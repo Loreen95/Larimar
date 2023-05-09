@@ -10,11 +10,21 @@
         <form method="POST" action="{{ route('register') }}" class="space-y-6">
         @csrf
 
+        <!-- Name -->
+        <div>
+            <x-input-label for="name" :value="__('Name')" class="block text-sm font-medium leading-6 text-gray-900"/>
+            <div class="mt-2">
+            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autocomplete="name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-700 sm:text-sm sm:leading-6"/>
+            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+            </div>
+        </div>
+
+
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" class="block text-sm font-medium leading-6 text-gray-900"/>
             <div class="mt-2">
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-700 sm:text-sm sm:leading-6"/>
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-700 sm:text-sm sm:leading-6"/>
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
         </div>
@@ -56,9 +66,9 @@
             </a> --}}
 
             
-            <x-primary-button class="flex w-full justify-center rounded-md bg-cyan-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-700">
+            <button class="flex w-full justify-center rounded-md bg-cyan-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-700" type="submit">
                 {{ __('Registreer') }}
-            </x-primary-button>
+            </button>
             {{-- <div>
                 <button type="submit" class="flex w-full justify-center rounded-md bg-cyan-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-700">Registreer</button>
             </div> --}}
