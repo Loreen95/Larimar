@@ -19,7 +19,39 @@
               </div>
           </div>
           <!-- For md screen size -->
-
+          {{-- <div class="dark:bg-cyan-700 bg-gray-50 px-6 py-9">
+            <div class="container mx-auto flex items-center justify-between">
+              <h1 class="md:w-2/12 cursor-pointer text-gray-800" aria-label="the Crib.">
+                <a href="{{route('welcome')}}"><span class="font-sans text-3xl text-white">Larimar</span></a>
+              </h1>
+          
+              <ul class="hidden md:flex items-center justify-center space-x-8">
+                <li>
+                  <a href="{{route('welcome')}}" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Home</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Nieuw</a>
+                </li>
+                <li>
+                  <div x-data="{ open: false }" x-on:mouseleave="open = false">
+                    <a href="javascript:void(0)" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline" x-on:mouseenter="open = true">Bovenkleding</a>
+                    <div x-show="open" x-on:click.away="open = false" class="absolute z-10 bg-white shadow-md py-2 rounded-md">
+                      <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">Truien</a>
+                      <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">Jassen</a>
+                      <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">Hoodies</a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div x-data="{ open: false }" x-on:mouseleave="open = false">
+                    <a href="javascript:void(0)" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline" x-on:mouseenter="open = true">Onderkleding</a>
+                    <div x-show="open" x-on:mouseleave="open = false" class="absolute z-10 bg-white shadow-md py-2 rounded-md">
+                      <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">Jeans</a>
+                      <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">Ondergoed</a>
+                      <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">Rokken</a>
+                    </div>
+                  </div>
+                </li> --}}
           <!-- For large screens -->
           <div class="dark:bg-cyan-700 bg-gray-50 px-6 py-9">
             <div class="container mx-auto flex items-center justify-between">
