@@ -10,19 +10,20 @@
     <title>{{ $title }} // {{ config('app.name')}}</title>
 </head>
 <body>
-    <div class="flex flex-col justify-between">
+    <div class="flex flex-col h-screen">
         <div class="header">
             @include('layout.navbar')
         </div>
-
-        <main class="h-screen">
+    
+        <main class="flex-grow">
             @yield('section')
         </main>
-
-        {{-- <footer class="bg-cyan-700">
+    
+        <footer class="bg-cyan-700">
             @include('layout.footer')
-        </footer> --}}
+        </footer>
     </div>
+    
     @vite('resources/js/script.js');
 </body>
 </html>
